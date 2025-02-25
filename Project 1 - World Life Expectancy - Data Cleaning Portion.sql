@@ -147,10 +147,10 @@ FROM world_life_expectancy
 WHERE `Life expectancy` <> ''
 ;
 
-# I think we need a window function here; how does Alex do it, my first approach isn't working
-# His approach - populate the missing values with the average from the year before and the year after
+# I think we need a window function here; my first approach isn't working
+# populate the missing values with the average from the year before and the year after
 # For Afghanistan that would be the avg of 2017 and 2019 and for Albania it would also be the avg of those 2 years
-# His approach involves another self join 
+# another self join 
 
 SELECT t1.Country, t1.Year, t1.`Life expectancy`,
 t2.Country, t2.Year, t2.`Life expectancy`,
